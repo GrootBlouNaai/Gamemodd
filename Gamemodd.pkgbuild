@@ -1,0 +1,21 @@
+# Maintainer: RP24
+
+pkgname=gamemodd
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A tool for extracting and writing back audio groups"
+arch=('x86_64')
+url="https://github.com/GrootBlouNaai/gamemodd"
+license=('GPLv2')
+depends=('rust')
+source=("$pkgname-$pkgver.tar.gz")
+
+build() {
+  cd "$pkgname-$pkgver"
+  cargo build --release
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  install -Dm755 target/release/Gamemodd "$pkgdir/usr/bin/Gamemodd"
+}
