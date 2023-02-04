@@ -9,3 +9,5 @@ Compilation:
 Use the PKGBUILD:
 makepkg gamemodd.pkgbuild
 credit to: https://github.com/iDestyKK/GMS_AudioGroup_Extract/
+
+This code is available freely under GPLv2
